@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Reception extends JFrame {
+public class Reception extends JFrame implements ActionListener{
     JButton newCustomer,rooms,dept,allEmployees,customers,manager,checkout,update,updateroom,pickup,searchroom,logout;
     Reception(){
         getContentPane().setBackground(Color.WHITE);
@@ -11,6 +11,7 @@ public class Reception extends JFrame {
         newCustomer.setBounds(10,30,200,30);
         newCustomer.setBackground(Color.BLACK);
         newCustomer.setForeground(Color.WHITE);
+        newCustomer.addActionListener(this);
         add(newCustomer);
 
         rooms=new JButton("Room");
@@ -88,10 +89,12 @@ public class Reception extends JFrame {
         setVisible(true);
     }
 
-//    public void actionPerformed(ActionEvent ae)
-//    {
-//
-//    }
+    public void actionPerformed(ActionEvent ae)
+    {
+        if(ae.getSource()==newCustomer){
+            new AddCustomer();
+        }
+    }
 
     public static void main(String[] args) {
         new Reception();
