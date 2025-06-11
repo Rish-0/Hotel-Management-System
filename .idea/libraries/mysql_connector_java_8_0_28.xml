@@ -2,8 +2,11 @@
   <library name="mysql-connector-java-8.0.28">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/src/mysql-connector-java-8.0.28.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/libraries/rs2xml.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/.idea/libraries/rs2xml.jar!/src" />
+    </SOURCES>
   </library>
 </component>

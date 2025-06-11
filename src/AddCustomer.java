@@ -9,7 +9,7 @@ public class AddCustomer extends JFrame implements ActionListener{
     JTextField tfnumber,tfname,tfcountry,tfdeposit;
     Choice croom;
     JRadioButton rbmale,rbfemale;
-    JLabel time;
+    JLabel checkintime;
     JButton add,back;
     AddCustomer(){
         getContentPane().setBackground(Color.WHITE);
@@ -103,10 +103,10 @@ public class AddCustomer extends JFrame implements ActionListener{
         lbltime.setFont(new Font("Raleway", Font.PLAIN,20));
         add(lbltime);
 
-        time=new JLabel(""+date);
-        time.setBounds(200,320,150,25);
-        time.setFont(new Font("Raleway",Font.PLAIN,17));
-        add(time);
+        checkintime=new JLabel(""+date);
+        checkintime.setBounds(200,320,150,25);
+        checkintime.setFont(new Font("Raleway",Font.PLAIN,17));
+        add(checkintime);
 
         JLabel lbldeposit=new JLabel("DEPOSIT");
         lbldeposit.setBounds(35,360,150,20);
@@ -156,11 +156,11 @@ public class AddCustomer extends JFrame implements ActionListener{
 
             String country=tfcountry.getText();
             String room= croom.getSelectedItem();
-            String samay=time.getText();
+            String time=checkintime.getText();
             String deposit=tfdeposit.getText();
             try {
                 Conn c=new Conn();
-                String query="insert into customer values('"+id+"','"+name+"','"+number+"','"+gender+"','"+country+"','"+room+"','"+samay+"','"+deposit+")'";
+                String query="insert into customer values('"+id+"','"+name+"','"+number+"','"+gender+"','"+country+"','"+room+"','"+time+"','"+deposit+"')";
                 String query2="update rooms set availability='Occupied' where roomnumber='"+room+"'";
                 c.s.executeUpdate(query);
                 c.s.executeUpdate(query2);
