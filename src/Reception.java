@@ -115,11 +115,30 @@ public class Reception extends JFrame implements ActionListener{
             new Department();
         } else if (ae.getSource()==allEmployees) {
             setVisible(false);
-
+            new EmployeeInfo();
         } else if (ae.getSource()==customers) {
             setVisible(false);
+            new CustomerInfo();
+        } else if (ae.getSource()==manager) {
+            setVisible(false);
+            new ManagerInfo();
+        } else if (ae.getSource()==checkout) {
+            setVisible(false);
 
+        } else if (ae.getSource()==updateroom) {
+            setVisible(false);
+
+        } else if (ae.getSource()==update) {
+            setVisible(false);
+
+        } else if (ae.getSource()==pickup) {
+            setVisible(false);
+
+        } else if (ae.getSource()==searchroom) {
+            setVisible(false);
+            new searchroom();
         }
+
     }
 
     public static void main(String[] args) {
