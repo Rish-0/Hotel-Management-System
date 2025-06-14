@@ -31,14 +31,6 @@ A comprehensive Java-based Hotel Management System developed using Java Swing fo
 - 💼 **Department Overview**
   - View and manage various departments in the hotel (e.g., Housekeeping, Kitchen)
 
-## 🖥️ Screenshots
-
-| Reception Dashboard | Add Customer | Room Info |
-|---------------------|--------------|-----------|
-| ![Reception](screenshots/reception.png) | ![Add Customer](screenshots/add_customer.png) | ![Rooms](screenshots/rooms.png) |
-
-*(Add your own screenshots in a `screenshots/` folder in your repo.)*
-
 ## 🧰 Tech Stack
 
 - **Language:** Java  
